@@ -1,0 +1,27 @@
+1.准备
+
+> 需要RHEL发行版内存2G以上，cpu支持硬件虚拟化
+
+2.配置安装源
+
+```shell
+#保证软件包最新
+yum -y update 
+设置RDO安装源
+yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+yum clean all
+yum makecache
+```
+
+3.安装openstack
+
+```shell
+yum install -y openstack-packstack
+```
+
+4.配置
+
+```
+packstack --allinone
+```
+
